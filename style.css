@@ -1,27 +1,82 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #e0e7ff; /* Background color */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0e7ff; /* Background color */
+  background-image: url('data:image/svg+xml,<svg id="visual" viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="1920" height="1080" fill="%23e0e7ff"></rect><defs><linearGradient id="grad1_0" x1="43.8%" y1="0%" x2="100%" y2="100%"><stop offset="14.444444444444446%" stop-color="%230d37e2" stop-opacity="1"></stop><stop offset="85.55555555555554%" stop-color="%230d37e2" stop-opacity="1"></stop></linearGradient></defs><defs><linearGradient id="grad1_1" x1="43.8%" y1="0%" x2="100%" y2="100%"><stop offset="14.444444444444446%" stop-color="%230d37e2" stop-opacity="1"></stop><stop offset="85.55555555555554%" stop-color="%23e0e7ff" stop-opacity="1"></stop></linearGradient></defs><defs><linearGradient id="grad2_0" x1="0%" y1="0%" x2="56.3%" y2="100%"><stop offset="14.444444444444446%" stop-color="%230d37e2" stop-opacity="1"></stop><stop offset="85.55555555555554%" stop-color="%230d37e2" stop-opacity="1"></stop></linearGradient></defs><defs><linearGradient id="grad2_1" x1="0%" y1="0%" x2="56.3%" y2="100%"><stop offset="14.444444444444446%" stop-color="%23e0e7ff" stop-opacity="1"></stop><stop offset="85.55555555555554%" stop-color="%230d37e2" stop-opacity="1"></stop></linearGradient></defs><g transform="translate(1920, 0)"><path d="M0 702C-79 702.7 -157.9 703.4 -216.9 667.6C-275.9 631.8 -315 559.5 -368.5 507.3C-422.1 455 -490 422.9 -504 366.2C-518 309.5 -478.1 228.3 -502.2 163.2C-526.2 98 -614.1 49 -702 0L0 0Z" fill="%237f92f9"></path><path d="M0 351C-39.5 351.4 -79 351.7 -108.5 333.8C-138 315.9 -157.5 279.7 -184.3 253.6C-211 227.5 -245 211.4 -252 183.1C-259 154.8 -239.1 114.1 -251.1 81.6C-263.1 49 -307 24.5 -351 0L0 0Z" fill="%230d37e2"></path></g><g transform="translate(0, 1080)"><path d="M0 -702C63.9 -665.6 127.9 -629.2 199 -612.5C270.1 -595.7 348.4 -598.6 412.6 -567.9C476.9 -537.2 527.1 -473 559.8 -406.7C592.6 -340.5 607.9 -272.4 628.6 -204.3C649.4 -136.1 675.7 -68.1 702 0L0 0Z" fill="%237f92f9"></path><path d="M0 -351C32 -332.8 63.9 -314.6 99.5 -306.2C135.1 -297.9 174.2 -299.3 206.3 -284C238.4 -268.6 263.5 -236.5 279.9 -203.4C296.3 -170.3 303.9 -136.2 314.3 -102.1C324.7 -68.1 337.9 -34 351 0L0 0Z" fill="%230d37e2"></path></g></svg>');
+  background-position: center;
 }
 
 .container {
-    text-align: center;
-    padding: 30px;
-    background-color: #ffffff; /* Background color for container */
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff; /* Background color for container */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
 }
 
 /* TODO: Add styles for labels, inputs, buttons, and output text */
 h1 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #4a4a4a; /* Header color */
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #4a4a4a; /* Header color */
 }
 
 /* Add more styles here as needed */
+
+.btnpass {
+  background-color: rgb(31, 198, 204);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px #c8c7c7;
+  cursor: pointer;
+}
+
+.flexbtnpass {
+  display: flex;
+  width: 500px;
+  height: 27px;
+  margin-top: 10px;
+  position: relative;
+  left: 70px;
+}
+
+.btnclip {
+  margin-left: 20px;
+  background-color: rgb(49, 233, 95);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px #c8c7c7;
+  cursor: pointer;
+}
+
+.btnpass:hover {
+  background-color: rgb(201, 210, 218);
+}
+
+.btnclip:hover {
+  background-color: rgb(201, 210, 218);
+}
+
+.inputlength {
+  display: flex;
+  width: 50%;
+  height: 20px;
+  margin-left: 90px;
+  margin-top: 5px;
+}
+
+.flexcheck {
+  display: flex;
+  margin-left: 110px;
+  width: 300px;
+  height: 150px;
+  flex-direction: column;
+  align-items: flex-start;
+}
