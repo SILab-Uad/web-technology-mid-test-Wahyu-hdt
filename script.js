@@ -1,5 +1,5 @@
 // TODO: Implement the password generation logic based on user input
-export const generatePassword = (length, options) => {
+const generatePassword = (length, options) => {
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const numbers = "0123456789";
@@ -26,3 +26,17 @@ export const generatePassword = (length, options) => {
 if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
   module.exports = { generatePassword };
 }
+
+document.getElementById("generateBtn").addEventListener("click", function () {
+  const length = parseInt(document.getElementById("length").value);
+  const options = {
+    includeUppercase: document.getElementById("includeUppercase").Checked,
+    includeLowercase: document.getElementById("includeLowercase").checked,
+    includeNumbers: document.getElementById("includeNumbers").checked,
+    includeSpecialChars: document.getElementById("includeSpecialChars").checked,
+  };
+  const password = generatePassword(length, options);
+  document.getElementById("passwordOutput").innerText = password;
+});
+
+document.getElementById("copyBtn").addEventListener("click");
