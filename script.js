@@ -5,11 +5,11 @@ const generatePassword = (length, options) => {
   const numbers = "0123456789";
   const specialChars = "!@#$%^&*()";
 
-  let passwordCharacterSet = "";
-  if (options.includeUppercase) passwordCharacterSet += uppercase;
-  if (options.includeLowercase) passwordCharacterSet += lowercase;
-  if (options.includeNumbers) passwordCharacterSet += numbers;
-  if (options.includeSpecialChars) passwordCharacterSet += specialChars;
+  let characterSet = "";
+  if (options.includeUppercase) characterSet += uppercase;
+  if (options.includeLowercase) characterSet += lowercase;
+  if (options.includeNumbers) characterSet += numbers;
+  if (options.includeSpecialChars) characterSet += specialChars;
 
   if (passwordCharacterSet === "") {
     throw new Error("You must select atleast one option");
@@ -17,13 +17,8 @@ const generatePassword = (length, options) => {
 
   let password = "";
   for (let i = 0; i < length; i++) {
-    const pwIndex = Math.floor(Math.random() * passwordCharacterSet.length);
-    password += passwordCharacterSet[pwIndex];
+    const randomIndex = Math.floor(Math.random() * characterSet.length);
+    password += characterSet[randomIndex];
   }
   return password;
 };
-
-// Cek modul Node.js
-if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
-  module.exports = { generatePassword };
-}
