@@ -11,7 +11,7 @@ export const generatePassword = (length, options) => {
   if (options.includeNumbers) characterSet += numbers;
   if (options.includeSpecialChars) characterSet += specialChars;
 
-  if (passwordCharacterSet === "") {
+  if (characterSet === "") {
     throw new Error("You must select atleast one option");
   }
 
