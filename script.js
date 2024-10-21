@@ -1,5 +1,6 @@
 // TODO: Implement the password generation logic based on user input
-import const generatePassword = (length, options) => {
+
+export const generatePassword = (length, options) => {
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const numbers = "0123456789";
@@ -12,7 +13,7 @@ import const generatePassword = (length, options) => {
   if (options.includeSpecialChars) characterSet += specialChars;
 
   if (characterSet === "") {
-    throw new Error("You must select atleast one option");
+    throw new Error("At least one character type must be selected.");
   }
 
   let password = "";
@@ -20,10 +21,6 @@ import const generatePassword = (length, options) => {
     const randomIndex = Math.floor(Math.random() * characterSet.length);
     password += characterSet[randomIndex];
   }
+
   return password;
 };
-
-if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
-  module.exports = { generatePassword };
-}
-
